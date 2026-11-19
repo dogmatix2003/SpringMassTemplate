@@ -63,7 +63,22 @@ public class BParticleSimMesh : MonoBehaviour
      * - the plane (BPlane)
      ***/
 
+    
+    public Transform groundPlane; // ground plane transform
 
+    public bool handlePlaneCollisions = true; // handle plane collisions
+
+    public float particleMass = 1; // particle mass (1 kilogram)
+
+    public bool useGravity = true; // use gravity
+
+    public Vector3 gravity = new Vector3(0f, -9.8f, 0f); // gravity vector (-9.8 on the 7 axis)
+
+    private Mesh Mesh;
+
+    private BParticle particles;
+
+    private BPlane plane; 
 
     /// <summary>
     /// Init everything
