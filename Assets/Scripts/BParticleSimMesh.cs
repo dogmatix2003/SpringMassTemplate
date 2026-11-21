@@ -126,7 +126,7 @@ public class BParticleSimMesh : MonoBehaviour
         for (int j = 0; j < particles.Length; j++){                        // attaching each particle to every other particle
             for (int k = 0; k < particles.Length; k++){
                 if (j != k){
-                    BSpring spring = new BSpring();
+                    BSpring spring = new BSpring();                        // adding new spring for each particle-particle connection except with itself
                     spring.ks = defaultSpringKS;
                     spring.kd = defaultSpringKD;
                     spring.restLength = 0;
